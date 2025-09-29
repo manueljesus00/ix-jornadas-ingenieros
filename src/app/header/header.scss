@@ -1,0 +1,54 @@
+/* src/app/header/header.component.scss */
+
+.navbar {
+    position: fixed; /* Hace que el elemento se quede fijo */
+    top: 0;          /* Lo coloca arriba del todo */
+    left: 0;
+    width: 100%;     /* Ocupa todo el ancho */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    
+    background-color: #004d99; /* Azul corporativo para la UPO */
+    color: white;
+    padding: 1em 3em; 
+    
+    display: flex;
+    justify-content: space-around; /* Distribuye el logo y el menú */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px; // Espaciado reducido para acomodar todos los ítems
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 5px 8px; // Padding interno reducido
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        white-space: nowrap; // Evita que los nombres de menú se rompan en dos líneas
+        font-size: 0.95em; // Opcional: Fuente ligeramente más pequeña
+        
+        &:hover,
+        &.active {
+            background-color: #003366; /* Azul más oscuro al pasar el ratón o estar activo */
+        }
+    }
+}

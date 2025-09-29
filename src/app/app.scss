@@ -1,0 +1,28 @@
+/* src/styles.css o src/styles.scss */
+
+/* Estilos básicos de la aplicación */
+* {
+    
+
+    
+}
+
+:host {
+    margin: 0;
+    padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /* 🚀 Aplicación de la Fuente EXO a toda la web 🚀 */
+    font-family: 'Exo', sans-serif;
+    line-height: 1.6;
+    //background-color: #f4f4f9; /* Fondo ligero para la web */
+    color: #333; /* Color de texto oscuro por defecto */
+    }
+    .content-area {
+        padding-top: 3em; 
+        padding-bottom: 0.2em;
+      
+      flex-grow: 1; 
+      /* ... otros estilos ... */
+    }

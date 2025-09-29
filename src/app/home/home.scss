@@ -1,0 +1,53 @@
+.home{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3em;
+
+    .section{
+        background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+
+    }
+
+    .intro{
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #2c3e50; /* Color de texto */
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #34495e; /* Color de texto */
+        }
+    }
+
+    .texto-foto{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+
+        .descripcion{
+            flex: 1;
+            font-size: 1.1em;
+            color: #2c3e50; /* Color de texto */
+            text-align: left;
+        }
+
+        .foto{
+            flex: 1;
+            img {
+                max-width: 70%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+

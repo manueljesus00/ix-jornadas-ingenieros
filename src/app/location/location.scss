@@ -1,0 +1,82 @@
+.location {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3em;
+
+    .basico {
+        background: rgba(255, 255, 255, 0.8);
+        /* Fondo blanco semi-transparente */
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+    }
+
+    .cards {
+        display: grid;
+        max-width: 100%;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 24px;
+
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: #fff;
+
+            img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            .card-text {
+                padding: 16px;
+                text-align: center;
+            }
+
+        }
+    }
+
+    .texto-mapa {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+
+        .descripcion {
+            flex: 1;
+            font-size: 1.1em;
+            color: #2c3e50;
+            /* Color de texto */
+            text-align: left;
+        }
+
+        .mapa {
+            flex: 1;
+
+            iframe {
+                width: 100%;
+                height: 450px;
+                border: 0;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .foto {
+            flex: 1;
+
+            img {
+                max-width: 70%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

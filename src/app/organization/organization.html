@@ -1,0 +1,33 @@
+<div class="organization">
+  <div class="basico">
+    <h1>Organización del evento</h1>
+    <p>
+      Detrás de las IX Jornadas Ingenieros en la UPO hay un gran equipo de personas trabajando para
+      que todo salga bien. Agradecemos su esfuerzo y dedicación. Estas son:
+    </p>
+    <div class="fichas">
+
+      <div class="ficha" *ngFor="let perfil of perfiles">
+        <div class="ficha-img">
+          <img [src]="perfil.imagen" [alt]="'Foto de ' + perfil.nombre" />
+        </div>
+        <div class="ficha-info">
+          <h3 class="nombre">{{ perfil.nombre }}</h3>
+          <p class="cargo">{{ perfil.cargo }}</p>
+         
+          <div class="trabajo"><i>{{ perfil.trabajo }}</i></div>
+           <div class="redes">
+            <a
+              *ngFor="let red of perfil.redes"
+              [href]="red.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ red.nombre }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
