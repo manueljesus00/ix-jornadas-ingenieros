@@ -5,6 +5,8 @@
     .bloque{
         text-align: center;
         margin: 1rem;
+        justify-content: center;
+        justify-items: center;
     }
 
     .basico {
@@ -14,15 +16,17 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 1rem;
+        justify-content: center;
     }
 
     .cards {
         display: grid;
-        max-width: 100%;
+        max-width: 50%;
         gap: 24px;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         padding: 24px;
         justify-items: center;
+        justify-content: center;
 
 
         .card {
@@ -38,7 +42,8 @@
             
 
             img {
-                max-width: 100%;
+                padding-top: 2rem;
+                max-width: 50%;
                 height: auto;
                 object-fit: cover;
             }
