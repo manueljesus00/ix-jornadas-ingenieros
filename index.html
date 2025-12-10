@@ -2,33 +2,21 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IX Jornadas Ingenieros UPO</title>
 
-  <!-- Bootstrap CSS -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
   />
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
 
-
-  <!-- Estilos personalizados (opcional) -->
-  <style>
-    /* Ajuste para la sección con imagen de fondo tipo "cover" */
-    .hero-section {
-      background: url("https://www.upo.es/upo_opencms/export/sites/upo/Galerias/Imagenes/cabecera-la-upo.jpg")
-        no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      padding: 100px 0; /* Ajusta según tu preferencia */
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
     <div class="container">
       <a class="navbar-brand text-primary fw-bold" href="#">
         IX Jornadas Ingenieros UPO
@@ -46,12 +34,15 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto align-items-center my-3 my-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#about">Sobre el evento</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#programa">Programa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#speakers">Ponentes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#location">Ubicación</a>
@@ -62,16 +53,15 @@
           <li class ="nav-item">
           <a
               href="https://docs.google.com/document/d/1qoAE6DUyBMFfAs5WpQuJ7_DdfGvgr4KASfDZQ74LYpg/edit?usp=sharing"
-              class="btn"
+              class="btn nav-link"
             >
               Info legal
             </a>
           </li>
-          <!-- Botón de inscripción -->
-          <li class="nav-item ms-3">
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
             <a
               href="https://pretix.eu/esoliupo/ixingenierosupo/"
-              class="btn btn-primary"
+              class="btn btn-primary w-100 w-lg-auto"
             >
               Tickets
             </a>
@@ -80,38 +70,30 @@
       </div>
     </div>
   </nav>
-  <!-- FIN HEADER / NAVBAR -->
 
-
-  <!-- CONTENIDO PRINCIPAL -->
-
-  <!-- Hero Section -->
   <section class="hero-section text-center d-flex flex-column justify-content-center align-items-center">
     <div class="container">
       <h1 class="display-4 fw-bold mb-3">IX Jornadas Ingenieros UPO</h1>
-      <p class="h5 mb-4">
+      <p class="h5 mb-4 text-light">
         Un encuentro entre pasado, presente y futuro de la universidad
       </p>
       <div class="mb-4">
-        <span class="fs-3 fw-bold">6 Febrero 2026</span>
+        <span class="fs-3 fw-bold bg-primary badge rounded-pill px-4 py-2">6 Febrero 2026</span>
       </div>
-      <!-- Enlace de inscripción -->
       <a
         href="https://pretix.eu/esoliupo/ixingenierosupo/"
-        class="btn btn-light text-primary fw-semibold px-4 py-2"
+        class="btn btn-light text-primary fw-bold px-4 py-3 shadow"
       >
         Inscríbete ahora
       </a>
     </div>
   </section>
-  <!-- Fin Hero Section -->
 
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
+  <section id="about" class="py-4 py-lg-5 bg-light">
     <div class="container">
       <h2 class="text-center fs-3 fw-bold mb-5">Sobre el evento</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
           <img
             src="https://cadenadh.com/wp-content/uploads/2021/09/Varios-estudiantes-Universidad-Pablo-Olavide_1365773492_101660418_667x375.jpg"
             alt="Imagen del evento"
@@ -119,11 +101,10 @@
           >
         </div>
         <div class="col-md-6">
-          <p class="mb-3">
-            Las IX Jornadas Ingenieros UPO son un evento anual que reúne a
+          <p class="mb-3 lead">
+            Las <strong>IX Jornadas Ingenieros UPO</strong> son un evento anual que reúne a
             estudiantes, profesionales y expertos en el campo de la ingeniería
-            para compartir conocimientos, experiencias y las últimas tendencias
-            en la industria.
+            para compartir conocimientos, experiencias y las últimas tendencias.
           </p>
           <p class="mb-3">
             Durante tres días, los participantes tendrán la oportunidad de
@@ -140,51 +121,59 @@
     </div>
   </section>
 
-  <!-- Programa Section -->
-  <section id="programa" class="py-5 bg-white">
+  <section id="programa" class="py-4 py-lg-5 bg-white">
     <div class="container">
       <h2 class="text-center fs-3 fw-bold mb-5">Programa</h2>
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="table-responsive">
-            <table class="table table-striped table-hover table-bordered">
+          <div class="table-responsive shadow-sm rounded">
+            <table class="table table-striped table-hover table-bordered align-middle mb-0">
               <thead class="table-primary">
                 <tr>
-                  <th scope="col" style="width: 20%;">Hora</th>
-                  <th scope="col" style="width: 80%;">Charla</th>
+                  <th scope="col" style="min-width: 120px;">Hora</th>
+                  <th scope="col">Charla</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>15:30 - 16:00</td>
+                  <td class="fw-bold">15:30 - 16:00</td>
                   <td>Acreditaciones</td>
                 </tr>
                 <tr>
-                  <td>16:00 - 16:30</td>
-                  <td>Bienvenida</td>
+                  <td class="fw-bold">16:00 - 16:30</td>
+                  <td>Bienvenida Institucional</td>
                 </tr>
                 <tr>
-                  <td>16:30 - 17:20</td>
-                  <td>Ponencia 1</td>
+                  <td class="fw-bold">16:30 - 17:20</td>
+                  <td>
+                    <strong class="text-primary d-block mb-1">Computación cuántica y el futuro de la ingeniería</strong>
+                    <small class="text-muted">Prof. Dr. Francisco Martínez Álvarez<br><i>Catedrático de la Universidad Pablo de Olavide, de Sevilla</i></small>
+                  </td>
                 </tr>
                 <tr>
-                  <td>17:20 - 18:10</td>
-                  <td>Ponencia 2</td>
+                  <td class="fw-bold">17:20 - 18:10</td>
+                  <td>
+                    <strong class="text-primary d-block mb-1">Realidades paralelas: Sesgos algorítmicos e IA responsable</strong>
+                    <small class="text-muted">Prof. Dra. María del Carmen Romero Ternero<br><i>Directora de la Escuela Técnica Superior de Ingeniería Informática de la Universidad de Sevilla</i></small>
+                  </td>
+                </tr>
+                <tr class="table-warning">
+                  <td class="fw-bold">18:10 - 19:00</td>
+                  <td>☕ Coffee Break & Networking</td>
                 </tr>
                 <tr>
-                  <td>18:10 - 19:00</td>
-                  <td>Coffee Break</td>
+                  <td class="fw-bold">19:00 - 19:50</td>
+                  <td><span class="fst-italic text-muted">Pendiente de anunciar</span></td>
                 </tr>
                 <tr>
-                  <td>19:00 - 19:50</td>
-                  <td>Ponencia 3</td>
+                  <td class="fw-bold">19:50 - 20:40</td>
+                  <td>
+                    <strong class="text-primary d-block mb-1">Mesa redonda: Ciclo del cibercrimen</strong>
+                    <small class="text-muted">Moderador: D. Manuel Jesús Flores Montaño</small>
+                  </td>
                 </tr>
                 <tr>
-                  <td>19:50 - 20:40</td>
-                  <td>Ponencia 4</td>
-                </tr>
-                <tr>
-                  <td>20:40 - 20:50</td>
+                  <td class="fw-bold">20:40 - 20:50</td>
                   <td>Cierre</td>
                 </tr>
               </tbody>
@@ -195,86 +184,83 @@
     </div>
   </section>
 
-  <!-- Speakers Section -->
-  <section id="speakers" class="py-5 bg-light">
+  <section id="speakers" class="py-4 py-lg-5 bg-light">
     <div class="container">
       <h2 class="text-center fs-3 fw-bold mb-5">Ponentes del evento</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <!-- Ponente 1 -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
         <div class="col">
-          <div class="card h-100">
+          <a href="https://www.linkedin.com/in/francisco-mart%C3%ADnez-%C3%A1lvarez-18b496130/" target="_blank" class="card h-100 text-decoration-none text-dark card-ponente">
             <img
-              src="img/stockpersonas.jpg"
+              src="img/ponentes/francisco.jpg"
               class="card-img-top"
-              alt="Ponente 1"
+              alt="Francisco Martínez Álvarez"
               style="height: 200px; object-fit: cover;"
             >
             <div class="card-body">
-              <h5 class="card-title fw-bold">Pendiente de anunciar</h5>
-              <p class="card-text">Pendiente de anunciar</p>
+              <h5 class="card-title fw-bold fs-6">Prof. Dr. Francisco Martínez Álvarez</h5>
+              <p class="card-text small text-muted">Catedrático de la Universidad Pablo de Olavide</p>
             </div>
-          </div>
+          </a>
         </div>
-        <!-- Ponente 2 -->
+
         <div class="col">
-          <div class="card h-100">
+          <a href="https://www.linkedin.com/in/mar%C3%ADa-del-carmen-romero-ternero-9a267925/" target="_blank" class="card h-100 text-decoration-none text-dark card-ponente">
             <img
-              src="img/stockpersonas.jpg"
+              src="img/ponentes/maria_carmen.jpg"
               class="card-img-top"
-              alt="Ponente 2"
+              alt="María del Carmen Romero Ternero"
               style="height: 200px; object-fit: cover;"
             >
             <div class="card-body">
-              <h5 class="card-title fw-bold">Pendiente de anunciar</h5>
-              <p class="card-text">Pendiente de anunciar</p>
+              <h5 class="card-title fw-bold fs-6">Prof. Dra. María del Carmen Romero Ternero</h5>
+              <p class="card-text small text-muted">Directora de la ETSII de la Universidad de Sevilla</p>
             </div>
-          </div>
+          </a>
         </div>
-        <!-- Ponente 3 -->
+
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 text-muted border-0 shadow-sm"> 
             <img
-              src="img/stockpersonas.jpg"
-              class="card-img-top"
+              src="img/ponentes/stockpersonas.jpg"
+              class="card-img-top grayscale"
               alt="Ponente 3"
-              style="height: 200px; object-fit: cover;"
+              style="height: 200px; object-fit: cover; opacity: 0.5;"
             >
             <div class="card-body">
-              <h5 class="card-title fw-bold">Pendiente de anunciar</h5>
-              <p class="card-text">Pendiente de anunciar</p>
+              <h5 class="card-title fw-bold fs-6">Pendiente de anunciar</h5>
+              <p class="card-text small">Próximamente</p>
             </div>
           </div>
         </div>
-        <!-- Ponente 4 -->
+
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 text-muted border-0 shadow-sm">
             <img
-              src="img/stockpersonas.jpg"
-              class="card-img-top"
+              src="img/ponentes/stockpersonas.jpg"
+              class="card-img-top grayscale"
               alt="Ponente 4"
-              style="height: 200px; object-fit: cover;"
+              style="height: 200px; object-fit: cover; opacity: 0.5;"
             >
             <div class="card-body">
-              <h5 class="card-title fw-bold">Pendiente de anunciar</h5>
-              <p class="card-text">Pendiente de anunciar</p>
+              <h5 class="card-title fw-bold fs-6">Pendiente de anunciar</h5>
+              <p class="card-text small">Próximamente</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  
-
-  <!-- Organization Section -->
-  <section id="location" class="py-5 bg-white">
+  <section id="location" class="py-4 py-lg-5 bg-white">
     <div class="container">
       <h2 class="text-center fs-3 fw-bold mb-5">Ubicación</h2>
       <div class="row">
         <div class="col-md-6 mb-4">
-          <div class="ratio ratio-16x9">
+          <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.2301895775396!2d-5.938416384689615!3d37.35619197983444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126e7f85bfbd09%3A0x2a2a48af2983e8b7!2sParaninfo%20de%20la%20Universidad%20Pablo%20de%20Olavide!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses"
+              src="https://maps.google.com/maps?q=Universidad%20Pablo%20de%20Olavide&t=&z=13&ie=UTF8&iwloc=&output=embed"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
@@ -282,295 +268,265 @@
             ></iframe>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
           <h3 class="fs-4 fw-bold mb-3">Universidad Pablo de Olavide</h3>
-          <p class="mb-3">
-            Ctra. de Utrera, km. 1<br>
-            41013 Sevilla, España
+          <p class="mb-3 text-muted">
+            <i class="bi bi-geo-alt-fill text-danger me-2"></i>Ctra. de Utrera, km. 1, 41013 Sevilla
           </p>
           <p class="mb-3">
-            Las IX Jornadas Ingenieros UPO se llevarán a cabo en el campus
-            principal de la Universidad Pablo de Olavide, ubicado a las afueras
-            de Sevilla. El campus cuenta con modernas instalaciones y excelentes
-            conexiones de transporte público.
+            Las jornadas se llevarán a cabo en el campus principal. Contamos con conexión de Metro (Parada Pablo de Olavide) y autobuses directos desde Sevilla.
           </p>
-          <p>
-            Para más información sobre cómo llegar y alojamiento, por favor
-            contacta con la organización del evento.
-          </p>
+          <a href="https://www.upo.es/cms1/export/sites/upo/infraestructuras/planimetria/documentos/Plano-General-del-Campus.pdf" target="_blank" class="btn btn-outline-primary w-50">Ver mapa del campus</a>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Sponsorship Info Section -->
-  <section class="py-5 bg-white" id="colaboradores">
+  <section class="py-4 py-lg-5 bg-light" id="colaboradores-info">
     <div class="container">
       <h2 class="text-center fs-3 fw-bold mb-5">Conviértete en Patrocinador</h2>
       
       <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="table-responsive">
-            <table class="table table-bordered align-middle">
+        <div class="col-lg-12">
+          <div class="table-responsive bg-white shadow-sm rounded p-2">
+            <table class="table table-bordered align-middle mb-0 text-center">
               <thead class="table-light">
                 <tr>
-                  <th scope="col">Beneficio</th>
-                  <th scope="col" class="text-center">Colaborador 100€</th>
-                  <th scope="col" class="text-center">Bronce 150€</th>
-                  <th scope="col" class="text-center">Plata 250€</th>
-                  <th scope="col" class="text-center">Oro 350€</th>
+                  <th scope="col" class="text-start">Beneficio</th>
+                  <th scope="col" style="min-width: 100px;">Colaborador<br>100€</th>
+                  <th scope="col" style="min-width: 100px;">Bronce<br>150€</th>
+                  <th scope="col" style="min-width: 100px;">Plata<br>250€</th>
+                  <th scope="col" style="min-width: 100px;" class="table-warning">Oro<br>350€</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Logo en el evento y la web</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Logo en el evento y la web</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Añadir material en el welcome pack</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Material en welcome pack</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Patrocinar parte del sorteo entre asistentes y subir a la entrega de premios</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Patrocinar parte del sorteo y subir a entrega de premios</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Logo en las acreditaciones</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Logo en acreditaciones</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Mención en las RRSS del evento y perfiles colaboradores</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Mención en redes sociales y perfiles colaboradores</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Logo proyectado en las pantallas</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Logo proyectado en las pantallas</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Invitación a la cena posterior al evento</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔ (1)</td>
-                  <td class="text-center text-success">✔ (1)</td>
-                  <td class="text-center text-success">✔ (2)</td>
+                  <td class="text-start">Cena posterior al evento</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔ (1)</td>
+                  <td class="text-success fw-bold">✔ (1)</td>
+                  <td class="text-success fw-bold table-warning">✔ (2)</td>
                 </tr>
                 <tr>
-                  <td>Stand disponible para la empresa</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Stand para empresa</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold">✔</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Roll-up de la empresa en las zonas de descanso y networking</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Roll-up de la empresa en las zonas de descanso y networking</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Publicación a elegir de la empresa en las RRSS del evento y perfiles colaboradores</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Publicación a elegir por la empresa en las RRSS del evento y perfiles colaboradores</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
                 <tr>
-                  <td>Mención y agradecimiento en apertura y cierre</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-danger">✘</td>
-                  <td class="text-center text-success">✔</td>
+                  <td class="text-start">Mención y agradecimiento en apertura y cierre</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-danger text-opacity-25">✘</td>
+                  <td class="text-success fw-bold table-warning">✔</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div class="mt-5 text-center">
-            <h3 class="fs-4 fw-bold mb-4">Descarga el dossier de patrocinio</h3>
-            <p class="mb-4">
-              Si estás interesado en colaborar con nosotros, puedes descargar el dossier de patrocinio haciendo clic en el siguiente enlace:
-            </p>
-            <a href="docs/dossier.pdf" class="btn btn-primary btn-lg mb-4">
-              Descargar Dossier de Patrocinio (PDF)
+            <h3 class="fs-4 fw-bold mb-4">¿Te interesa?</h3>
+            <p>Estás a un click de formar parte de este evento. Si quieres tener más información, puedes descargar el dossier de patrocinadores en el siguiente enlace:</p>
+            <a href="docs/dossier.pdf" class="btn btn-primary btn-lg mb-4 shadow">
+              <i class="bi bi-file-earmark-pdf me-2"></i>Descargar Dossier (PDF)
             </a>
             <p class="text-muted">
-              Para más información puedes contactar con nosotros a través del correo 
-              <a href="mailto:ingenierosupo@esoliupo.org">ingenierosupo@esoliupo.org</a>
+              Dudas: <a href="mailto:ingenierosupo@esoliupo.org">ingenierosupo@esoliupo.org</a>
             </p>
-            <p class="fw-bold">
-              Tu apoyo es fundamental para el éxito de este evento. ¡Gracias por considerar ser parte de él!
-            </p>
+            <b>Tu apoyo es fundamental para el éxito del evento. ¡Gracias por confiar en nosotros!</b>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sponsors Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center fs-3 fw-bold mb-5">Nuestros Patrocinadores</h2>
-      
-      <!-- Apoyo Institucional -->
-     <!-- <h3 class="text-center fs-4 fw-bold mb-4">Apoyo Institucional</h3>
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center align-items-center" style="margin: 1em;">
-        <img
-          src="img/universidad.PNG"
-          alt="Sponsor 1"
-          style="max-height: 150px;"
-        />
-      </div>
-    </div> -->
+  <section id="colaboradores" class="container my-5 zona-patrocinadores">
     
-    <!-- Colaboradores Bronce -->
-    <h3 class="text-center fs-4 fw-bold mb-4">Colaboradores Plata</h3>
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center align-items-center" style="margin: 1em;">
-        <img
-          src="img/raiola.png"
-          alt="Raiola"
-          style="max-width: 250px;"
-        />
+    <div class="mb-5 text-center seccion-nivel">
+      <h3 class="nivel-titulo">Organización</h3>
+      <div class="row justify-content-center align-items-center g-4">
+        
+        <div class="col-12 col-md-4">
+          <a href="https://www.upo.es/eps" class="partner-card">
+            <img src="img/logos/organizacion/eps.png" alt="EPS" class="partner-img">
+            <div class="partner-overlay">
+              <span class="fw-bold">Escuela Politécnica Superior</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <a href="https://instagram.com/esoliupo" class="partner-card">
+            <img src="img/logos/organizacion/esoliupo.png" alt="ESOLIUPO" class="partner-img">
+            <div class="partner-overlay">
+              <span class="fw-bold">Asociación ESOLIUPO</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <a href="https://www.upo.es/departamento-deporte-e-informatica/es/" class="partner-card">
+            <img src="img/logos/organizacion/deporte_informatica.png" alt="Deporte e Informática" class="partner-img">
+            <div class="partner-overlay">
+              <span class="fw-bold">Departamento de Deporte e Informática - UPO</span>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
-    
-    <!-- Bebida oficial -->
-    <!-- <h3 class="text-center fs-4 fw-bold mb-4">Bebida oficial</h3>
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center align-items-center" style="margin: 1em;">
-        <img
-          src="img/monster.png"
-          alt="Sponsor 4"
-          style="max-height: 400px;"
-        />
+
+    <div class="mb-5 text-center seccion-nivel">
+      <h3 class="nivel-titulo">Apoyo Institucional</h3>
+      <div class="row justify-content-center align-items-center g-4">
+        
+        <div class="col-6 col-md-3">
+          <a href="https://www.linkedin.com/groups/4729971/" class="partner-card">
+            <img src="img/logos/institucional/club_alumni.png" alt="Alumni" class="partner-img">
+            <div class="partner-overlay">
+              <span>Club Alumni UPO</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="https://www.upo.es/estudiantes/es/index.html" class="partner-card">
+            <img src="img/logos/institucional/vr_estudiantes.png" alt="VR Estudiantes" class="partner-img">
+            <div class="partner-overlay">
+              <span>Vicerrectorado de Estudiantes - UPO</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="https://upo.es/eps" class="partner-card">
+            <img src="img/logos/institucional/deleeps.png" alt="DeleEPS" class="partner-img">
+            <div class="partner-overlay">
+              <span>Delegación de Estudiantes de la Escuela Politécnica Superior - UPO</span>
+            </div>
+          </a>
+        </div>
+
       </div>
-    </div> -->
-      
     </div>
+
+    <div class="mb-5 text-center seccion-nivel">
+      <h3 class="nivel-titulo">Patrocinadores Plata</h3>
+      <div class="row justify-content-center align-items-center g-3">
+        <div class="col-6 col-md-2">
+          <a href="https://raiolanetworks.com/" class="partner-card">
+            <img src="img/logos/plata/raiola.png" alt="Raiola" class="partner-img">
+            <div class="partner-overlay">
+              <span class="small">Raiola Networks</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <!-- Organization Section -->
-  <section class="py-5 bg-white">
+  <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
-      <h2 class="text-center fs-3 fw-bold mb-5">Nuestros Organizadores</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-        <!-- Ajusta la ruta de las imágenes según tu necesidad -->
-        <div class="col d-flex justify-content-center align-items-center">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZV49QgTHk_Rq9jOJtLRV73aUjYVeOUS4ZQ&s"
-            alt="Escuela Politécnica Superior UPO"
-            style="width: 65%; height: auto;"
-          />
-        </div>
-        <div class="col d-flex justify-content-center align-items-center">
-          <img
-            src="https://www.upo.es/cms1/export/sites/upo/comunicacion/imagenes/mic-upo-descargas/Marca-UPO-Horizontal.jpg"
-            alt="Universidad Pablo de Olavide"
-            style="width: 65%; height: auto;"
-          />
-        </div>
-        <div class="col d-flex justify-content-center align-items-center">
-          <img
-            src="img/esoliupo.png"
-            alt="Asociación ESOLIUPO"
-            style="width: 65%; height: auto;"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white">
-    <div class="container py-5">
-      <!-- Fila superior: columnas principales -->
       <div class="row">
-        <!-- Columna 1: Información -->
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h5 class="fw-bold">IX Jornadas Ingenieros UPO</h5>
-          <p class="mb-0">
-            Universidad Pablo de Olavide
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold text-primary">IX Jornadas Ingenieros UPO</h5>
+          <p class="small text-secondary">
+            Universidad Pablo de Olavide.<br>
+            Fomentando la ingeniería desde Sevilla.
           </p>
         </div>
 
-        <!-- Columna 2: Contacto -->
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col-md-4 mb-4">
           <h5 class="fw-bold">Contacto</h5>
-          <p class="mb-1">
-            Email:
-            <a
-              href="mailto:info@esoliupo.org"
-              class="text-white text-decoration-none"
-            >
-              info@esoliupo.org
-            </a>
-          </p>
-          <p class="mb-0">Teléfono: +34 621 306 627</p>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:info@esoliupo.org" class="text-white text-decoration-none">info@esoliupo.org</a></li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i>+34 621 306 627</li>
+          </ul>
         </div>
 
-        <!-- Columna 3: Síguenos -->
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <h5 class="fw-bold">Síguenos</h5>
-          <!-- Ejemplo con Bootstrap Icons (o Font Awesome, etc.) -->
-          <a href="https://www.linkedin.com/groups/4729971/" class="text-white text-decoration-none me-3">
-            <i class="bi bi-linkedin fs-4"></i>
-          </a>
-          <a href=https://x.com/esoliupo#" class="text-white text-decoration-none me-3">
-            <i class="bi bi-twitter fs-4"></i>
-          </a>
-          <a href="https://www.instagram.com/esoliupo" class="text-white text-decoration-none">
-            <i class="bi bi-instagram fs-4"></i>
-          </a>
+          <div>
+            <a href="https://www.linkedin.com/groups/4729971/" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+            <a href="https://x.com/esoliupo" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="https://www.instagram.com/esoliupo" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
         </div>
       </div>
 
-      <!-- Separador (opcional) -->
       <hr class="border-secondary my-4" />
 
-      <!-- Fila inferior: Copyright y créditos -->
       <div class="row">
         <div class="col text-center">
-          <small>
-            &copy; 2025-26 IX Jornadas Ingenieros UPO. Todos los derechos reservados.
-            <br />
-            Developed by Esoliupo
+          <small class="text-secondary">
+            &copy; 2025-26 IX Jornadas Ingenieros UPO. Developed by <strong class="text-white">Esoliupo</strong>.
           </small>
         </div>
       </div>
     </div>
   </footer>
-  <!-- FIN FOOTER -->
 
-
-  <!-- Bootstrap JS (Popper + Bootstrap Bundle) -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
 
-  <!-- Tu JS adicional, por ejemplo para el countdown -->
-  <script>
-    // Ejemplo de script para countdown (reemplaza con tu lógica real)
-    // const targetDate = new Date("2025-02-07T15:00:00");
-    // ...
-  </script>
 </body>
 </html>
