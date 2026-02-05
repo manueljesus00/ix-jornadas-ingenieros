@@ -78,7 +78,7 @@
         Un encuentro entre pasado, presente y futuro de la universidad
       </p>
       <div class="mb-4">
-        <span class="fs-3 fw-bold bg-primary badge rounded-pill px-4 py-2">6 Febrero 2026</span>
+        <span class="fs-3 fw-bold bg-primary badge rounded-pill px-4 py-2">27 Febrero 2026</span>
       </div>
       <a
         href="https://pretix.eu/esoliupo/ixingenierosupo/"
@@ -633,9 +633,67 @@
     </div>
   </footer>
 
+  <!-- Modal de aviso meteorológico -->
+  <div id="weatherModal" class="weather-modal">
+    <div class="weather-modal-content">
+      <button class="weather-modal-close" onclick="closeWeatherModal()">&times;</button>
+      
+      <div class="weather-modal-body">
+        <div class="weather-modal-icon">
+          <i class="bi bi-cloud-rain-heavy fs-1 text-warning"></i>
+        </div>
+        
+        <h2 class="weather-modal-title">Aviso Importante</h2>
+        
+        <div class="weather-modal-message">
+          <p class="mb-4">Debido a los partes meteorológicos, la activación del Plan de Emergencia ante Riesgo de Inundaciones de Andalucía y la singularidad del espacio en el que se encuentra la universidad, y siendo necesario asegurar el evento para participantes, empresas y ponentes, se ha decidido aplazar las jornadas al <strong>27 de febrero de 2026</strong>.</p>
+          
+          <p class="mb-4 fst-italic text-secondary">Así mismo desde la organización deseamos una pronta recuperación a las ciudades afectadas por la borrasca Leonardo.</p>
+          
+          <p class="mb-3">✓ Tus entradas siguen siendo válidas</p>
+          
+          <hr>
+          
+          <p class="mb-3"><strong>Si no puedes asistir:</strong></p>
+          <p class="mb-2">Avisa por correo a <a href="mailto:ingenierosupo@esoliupo.org" class="text-decoration-none fw-bold">ingenierosupo@esoliupo.org</a></p>
+          
+          <hr>
+          
+          <p class="mb-3"><strong>Si no quieres mantener tu reserva para la cena (mismo día):</strong></p>
+          <p class="mb-0">También envía un correo a <a href="mailto:ingenierosupo@esoliupo.org" class="text-decoration-none fw-bold">ingenierosupo@esoliupo.org</a></p>
+        </div>
+      </div>
+      
+      <div class="weather-modal-footer">
+        <button class="btn btn-primary w-100" onclick="closeWeatherModal()">Entendido</button>
+      </div>
+    </div>
+  </div>
+
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
+  
+  <script>
+    // Mostrar modal al cargar la página
+    window.addEventListener('load', function() {
+      const modal = document.getElementById('weatherModal');
+      modal.style.display = 'flex';
+    });
+    
+    function closeWeatherModal() {
+      const modal = document.getElementById('weatherModal');
+      modal.style.display = 'none';
+    }
+    
+    // Cerrar modal al hacer clic fuera del contenido
+    document.addEventListener('click', function(event) {
+      const modal = document.getElementById('weatherModal');
+      if (event.target === modal) {
+        closeWeatherModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
